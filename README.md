@@ -1,7 +1,7 @@
  *  INSTAGRAM FEED LIKER [v3]
  *  STATUS @BETA
  *  AUTHOR @DBGRAM
- *  WHATSAPP  +917012045385
+ *  Contact Wp: +917012045385 , email : ajesh4ab@gmail.com
  *  RECOMMENDED SLEEP 60s
  
 ## Tutorial on Termux [ANDROID]
