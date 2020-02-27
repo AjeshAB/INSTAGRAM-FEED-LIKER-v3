@@ -19,7 +19,7 @@ echo "
 ";
 $username    = getUsername();
 $password    = getPassword();
-$sleep = rand(0,10) + getComment('[?]  Sleep in Seconds: ');
+
 echo '•••••••••••••••••••••••••••••••••••••••••' . PHP_EOL . PHP_EOL;
 $login = login($username, $password);
 if ($login['status'] == 'success') {
@@ -29,6 +29,8 @@ if ($login['status'] == 'success') {
         'csrftoken' => $login['csrftoken'],
         'sessionid' => $login['sessionid']
     );
+  
+  $sleep = rand(0,10) + getComment('[?]  Sleep in Seconds ( RECOMMENDED 60 ) : ');
     while (true) {
         $profile    = getHome($data_login);
         $data_array = json_decode($profile);
