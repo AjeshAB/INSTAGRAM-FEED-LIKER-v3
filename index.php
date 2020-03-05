@@ -3,11 +3,11 @@ set_time_limit(0);
 include 'Instagram.class.php';
 clear();
 echo "
- *  INSTAGRAM FEED LIKER [v3]
+ *  INSTAGRAM FEED LIKER [v 3.01]
  *  STATUS @BETA
  *  AUTHOR @DBGRAM
  *  WHATSAPP  +917012045385
- *  RECOMMENDED SLEEP 60s
+ *  RECOMMENDED SLEEP 100s
   
     •••••••••••••••••••••••••••••••••••••••••
     
@@ -29,9 +29,13 @@ if ($login['status'] == 'success') {
         'csrftoken' => $login['csrftoken'],
         'sessionid' => $login['sessionid']
     );
-  
-  $sleep = rand(0,10) + getComment('[?]  Sleep in Seconds ( RECOMMENDED 60 ) : ');
+
+    $slee = getComment('[?]  Sleep in Seconds ( RECOMMENDED 100 ) : ');
+    $sleep = $slee + rand(0,10);
     while (true) {
+
+
+        if (n8off() == true):
         $profile    = getHome($data_login);
         $data_array = json_decode($profile);
         $result     = $data_array->user->edge_web_feed_timeline;
@@ -63,7 +67,18 @@ if ($login['status'] == 'success') {
         echo '[+] [' . date("H:i:s") . '] Sleep for ' . $sleep . ' seconds [+]' . PHP_EOL;
         sleep( $sleep);
         echo '•••••••••••••••••••••••••••••••••••••••••' . PHP_EOL . PHP_EOL;
+        else:
+
+            echo "Next Run time is 11 AM".PHP_EOL.PHP_EOL;
+
+        sleep(rand(100,600));
+
+        endif;
+
     }
+
+
+
 
 } else
 
