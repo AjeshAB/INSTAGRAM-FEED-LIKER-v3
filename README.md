@@ -14,6 +14,14 @@
 	$ cd INSTAGRAM-FEED-LIKER-v3
 	$ php index.php
 	
+## Update on Termux [ANDROID]	
+
+	just close termux app and reopen
+	$ rm -rf INSTAGRAM-FEED-LIKER-v3
+	$ git clone https://github.com/D3V1Lh4x0r/INSTAGRAM-FEED-LIKER-v3.git
+	$ cd INSTAGRAM-FEED-LIKER-v3
+	$ php index.php
+
 	
 ## Warning
 	⚠ Use tools at your own risk.
