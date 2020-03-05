@@ -21,6 +21,30 @@ function getStr($string,$start,$end){
     return $str[0];
 }
 
+
+function n8off(){
+
+    $current_time = strtotime('now');
+    if ($current_time > strtotime('11:00am') && $current_time < strtotime('09:00pm')) {
+
+
+        return true;
+
+
+    }else{
+
+        return false;
+
+
+
+    }
+
+
+}
+
+
+
+
 function RandStr($randstr){
     $char = 'qwertyuiopasdfghjklzxcvbnm';
     $char .= 'QWERTYUIOPASDFGHJKLZXCVBNM';
