@@ -31,11 +31,11 @@ if ($login['status'] == 'success') {
     );
 
     $slee = getComment('[?]  Sleep in Seconds ( RECOMMENDED 100 ) : ');
-    $sleep = $slee + rand(0,10);
+  
     while (true) {
 
-
         if (n8off() == true):
+       $sleep = $slee + rand(0,10);
         $profile    = getHome($data_login);
         $data_array = json_decode($profile);
         $result     = $data_array->user->edge_web_feed_timeline;
